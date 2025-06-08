@@ -1,0 +1,97 @@
+# 🚗 Car Rental System
+
+A simple car rental management system with two user roles: **Client** and **Admin**.
+
+---
+
+## 🧑‍💼 User Roles and Flow
+
+### 👤 Client Flow
+
+1. **Select Role**
+   - On the main page, choose **"Client"**.
+
+2. **Login**
+   - Enter your login credentials.
+
+3. **Home Page**
+   - After login, the user is redirected to the **Home Page**.
+
+4. **Navigation Bar Includes:**
+   - **Home** – Main page after login.
+   - **About** – Information about our company.
+   - **Services** – Displays available rental services and car options.
+   - **Profile** – Shows user's personal information and rental history.
+
+---
+
+### 🛠️ Admin Flow
+
+1. **Select Role**
+   - On the main page, choose **"Admin Dashboard"**.
+
+2. **Login**
+   - Enter your admin credentials.
+
+3. **Admin Landing Page**
+   - Redirected to the **Admin Dashboard** after successful login.
+
+4. **Admin Capabilities:**
+   - **Add Cars** – Add new cars to the rental inventory.
+   - **Edit Cars** – Update existing car details.
+   - **Delete Cars** – Remove cars from the system.
+
+---
+
+## 📌 Notes
+
+- Only authenticated users can access their respective dashboards.
+- Admin and Client interfaces are role-based for security and organization.
+- Designed for simplicity and ease of use.
+
+---
+
+## 📁 Project Structure (optional)
+
+```bash
+/your-project-folder
+│
+├── client/
+│   ├── home.php
+│   ├── about.php
+│   ├── services.php
+│   └── profile.php
+│
+├── admin/
+│   ├── dashboard.php
+│   ├── add_car.php
+│   ├── edit_car.php
+│   └── delete_car.php
+│
+├── login.php
+├── index.php  # role selection page
+└── README.md
+
+
+============================================================
+                     PROJECT INFORMATION
+============================================================
+
+Project Name: [CAR-RENTAL-SYSTEM (CARVIBE)]
+Developed By: Dave Ancheta
+Year: 2025
+
+============================================================
+                      COPYRIGHT NOTICE
+============================================================
+
+© 2025 Dave Ancheta and Team. All rights reserved.
+
+This project and all its contents are the intellectual property 
+of Dave Ancheta and his collaborators. Unauthorized copying, 
+distribution, or modification of any part of this project 
+is strictly prohibited without prior written permission.
+
+For inquiries or collaborations, contact: [daveancheta8@gmail.com]
+
+============================================================
