@@ -29,8 +29,15 @@ $routes->get('/about', 'Home::about');
 $routes->get('/services', 'Home::services');
 $routes->get('/home', 'Home::home');
 $routes->post('api/login', 'Api\LoginAPI::login');
-$routes->post('api/register', 'Api\RegisterApi::create');
+$routes->post('api/register', 'Api\RegisterAPI::create');
 
+
+
+$routes->group('api', ['namespace' => 'App\Controllers\Api'], function($routes) {
+    $routes->resource('cars', [
+        'controller' => 'CarControllerAPI',
+    ]);
+});
 
 
 
