@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 20, 2025 at 04:13 AM
+-- Generation Time: Jun 20, 2025 at 02:05 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -38,6 +38,13 @@ CREATE TABLE `accounts` (
   `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `accounts`
+--
+
+INSERT INTO `accounts` (`id`, `fullname`, `email`, `phone`, `address`, `password`, `created_at`, `updated_at`) VALUES
+(13, 'Heaven Dave Ancheta', 'daveancheta@gmail.com', '09876859483', '123 Gothom City', '$2y$10$Rt.S98.aa6.9oNdsYN2YyOwfjhiU.OxEYIUntTpqahTwNRv49qngm', '2025-06-20 11:26:28', '2025-06-20 19:26:58');
+
 -- --------------------------------------------------------
 
 --
@@ -51,6 +58,13 @@ CREATE TABLE `admin` (
   `created_at` datetime NOT NULL DEFAULT current_timestamp(),
   `updated_at` varchar(100) NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `username`, `password`, `created_at`, `updated_at`) VALUES
+(5, 'admin', 'admin123', '2025-06-07 08:42:23', 'current_timestamp()');
 
 -- --------------------------------------------------------
 
@@ -69,6 +83,13 @@ CREATE TABLE `cars` (
   `updated_at` datetime DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+--
+-- Dumping data for table `cars`
+--
+
+INSERT INTO `cars` (`id`, `car_name`, `car_price`, `description`, `image_path`, `status`, `created_at`, `updated_at`) VALUES
+(35, 'lambo', '120', 'Luxury German sports car brand known for performance and design excellence.', '1750144862_af7fc9a2ca8b1d2dfb2f.jpg', 'Available', '2025-06-17 07:21:02', '2025-06-17 07:21:02');
+
 -- --------------------------------------------------------
 
 --
@@ -79,7 +100,8 @@ CREATE TABLE `rented-cars` (
   `id` int(11) NOT NULL,
   `fullname` varchar(110) NOT NULL,
   `car_name` varchar(110) NOT NULL,
-  `rented_days` int(11) NOT NULL
+  `rented_days` int(11) NOT NULL,
+  `date` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -119,25 +141,25 @@ ALTER TABLE `rented-cars`
 -- AUTO_INCREMENT for table `accounts`
 --
 ALTER TABLE `accounts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `cars`
 --
 ALTER TABLE `cars`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT for table `rented-cars`
 --
 ALTER TABLE `rented-cars`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=42;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
