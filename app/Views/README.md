@@ -95,3 +95,74 @@ is strictly prohibited without prior written permission.
 For inquiries or collaborations, contact: [daveancheta8@gmail.com]
 
 ============================================================
+
+## 🚀 Deployment Summary
+
+### A. Hosting Platform (if live)
+
+The **Car Rental Management System** was deployed and tested locally using **XAMPP**, a cross-platform web server package that includes Apache and MySQL. This setup allowed the system—built with **CodeIgniter**—to run in a stable and controlled development environment.
+
+---
+
+### B. Configuration Steps Taken
+
+#### 🔧 XAMPP Installation
+- Installed **XAMPP** on a Windows machine.
+- Started **Apache** and **MySQL** services via the **XAMPP Control Panel**.
+
+#### 📁 Project Setup
+- Placed the project folder `Car-Rental-System-Enhanced` inside the `htdocs` directory of XAMPP.
+- Configured the base URL in `application/config/config.php` to:
+
+
+#### 🗃️ Database Configuration
+- Created a new database using **phpMyAdmin**.
+- Imported the SQL dump file containing the database schema and sample data.
+- Updated the database settings in `application/config/database.php` with local credentials.
+
+#### 🔗 API and Routing Setup
+- Verified **RESTful API endpoints** using **Postman**.
+- Configured `.htaccess` for clean URLs.
+- Enabled `mod_rewrite` in Apache.
+
+#### ✅ Testing and Validation
+- Tested:
+- Role-based access (Admin, User, etc.)
+- Login/Logout functionality
+- API requests on `localhost`
+- Performed **file upload stress tests** to confirm system stability.
+
+---
+
+### C. Challenges in Deployment
+
+#### 🧩 Composer Not Recognized
+- **Issue**: `composer install` was not recognized in the terminal.
+- **Resolution**: Added PHP and Composer to the system's environment variables.
+
+#### 🌐 .htaccess Configuration
+- **Issue**: Encountered 404 errors due to improper URL routing.
+- **Resolution**: Enabled `mod_rewrite` in Apache and verified `.htaccess` configuration.
+
+#### 📦 File Size Limits
+- **Issue**: Uploading large files failed.
+- **Resolution**: Increased `upload_max_filesize` and `post_max_size` in `php.ini`.
+
+---
+
+### D. Access Link or Demo
+
+- ⚙️ The system is currently hosted **locally** and not deployed on a public server.
+- 📂 GitHub Repository: [Car-Rental-System-Enhanced](https://github.com/daveancheta/Car-Rental-System-Enhanced)
+
+## 🔐 Default Login Credentials
+
+Use the following credentials to log in and test the system:
+
+### 🛠️ Admin Account
+- **Username:** `admin`
+- **Password:** `admin123`
+
+### 👤 Regular User Account
+- **Email:** `daveancheta@gmail.com`
+- **Password:** `daveancheta123%`
